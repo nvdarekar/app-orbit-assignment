@@ -1,0 +1,97 @@
+[
+    {
+        "id":1,
+        "first_name":"Ram",
+        "last_name":"Krishnan",
+        "emails": [ {
+                "email_type":"work",
+                "email" : "ram@domain.com"
+            },
+            {
+                "email_type":"personal",
+                "email" : "ram@domain.com"
+            }
+        ],
+        "contacts":[{
+                "phone_type":"work",
+                "phone" : "044 432102"
+            },
+            {
+                "phone_type":"personal",
+                "phone" : "044 432102"
+            }
+        ]
+    },
+    {
+        "id":2,
+        "first_name":"Gopala",
+        "last_name":"Krishnan",
+        "emails": [ {
+                "email_type":"work",
+                "email" : "shyam@domain.com"
+            },
+            {
+                "email_type":"personal",
+                "email" : "shyam@domain.com"
+            }
+        ],
+        "contacts":[{
+                "phone_type":"work",
+                "phone" : "044 432102"
+            },
+            {
+                "phone_type":"personal",
+                "phone" : "044 432102"
+            }
+        ]
+
+    },
+    {
+        "id":3,
+        "first_name":"Shyam",
+        "last_name":"Roy",
+        "emails": [ {
+                "email_type":"work",
+                "email" : "shyam@domain.com"
+            },
+            {
+                "email_type":"personal",
+                "email" : "shyam@domain.com"
+            }
+        ],
+        "contacts":[{
+                "phone_type":"work",
+                "phone" : "044 432102"
+            },
+            {
+                "phone_type":"personal",
+                "phone" : "044 432102"
+            }
+        ]
+
+    },
+    {
+        "id":4,
+        "first_name":"Ajit",
+        "last_name":"Krishnan",
+        "emails": [ {
+                "email_type":"work",
+                "email" : "ajit@domain.com"
+            },
+            {
+                "email_type":"personal",
+                "email" : "ajit@domain.com"
+            }
+        ],
+        "contacts":[{
+                "phone_type":"work",
+                "phone" : "044 432102"
+            },
+            {
+                "phone_type":"personal",
+                "phone" : "044 432102"
+            }
+        ]
+
+    }
+]
