@@ -1,0 +1,65 @@
+<div class="page-header">
+    <h1>Contacts</h1>
+</div>
+<div class="row contact-search-row">
+    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+        <form class="form-inline">
+            <label for="search-input"> Quick Search Contacts:</label>
+            <input type="text" class="form-control" id="search-input" 
+            ng-model="searchQuery" ng-change="search()" />
+        </form>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 add-contact-button-col">
+       <a ng-click="addNewContact()"> <button class="btn btn-primary pull-right dark-gray-backgroud" id="add-contact-button"> Add Contact</button> </a>        
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 ">
+        <table class="table  table-bordered" id="contacts-table" >
+            <thead>
+                <th class="col-md-1 blue-color"> # </th>
+                <th class="col-md-3 blue-color"> Name </th>
+                <th class="col-md-4 blue-color "> Email Address </th>
+                <th class="col-md-4 blue-color"> Contanct No </th>
+            </thead>
+            <tbody>
+              <tr ng-repeat="x in pagedContacts[currentPage]" ng-click="editContact(x)">
+                <td><span ng-bind="currentPage * contactsPerPage + $index + 1"> </span></td>
+                <td> {{x.first_name}} {{x.last_name}} </td>
+                <td>
+                    <span ng-repeat="email in x.emails">
+                        <span class="blue-color">
+                            <strong>{{email.email_type}}:</strong>
+                        </span>
+                        <span> {{email.email}}</span> <br>
+                    </span>
+                </td>
+                <td>
+                    <span ng-repeat="contact in x.contacts">
+                        <span class="blue-color">
+                            <strong>{{contact.phone_type}}:</strong>
+                        </span>
+                        <span> {{contact.phone}}</span> <br>
+                    </span>     
+                </td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-md-12 ">
+              <ul class="pager" id="contacts-pagination">
+                <li ng-class="{disabled: currentPage == 0}" >
+                  <a href="javascript:;" ng-click="prevPage()">
+                  « Prev</a>
+                </li>
+                <li ng-repeat="n in range(pagedContacts.length)" ng-class="{active: n == currentPage}" ng-click="setPage()">
+                  <a href="javascript:;" ng-bind="n + 1">1</a>
+                </li>
+                <li ng-class="{disabled: currentPage == pagedContacts.length - 1}">
+                  <a href="javascript:;" ng-click="nextPage()">Next »</a>
+                </li>
+              </ul>
+        </div>
+    </div>
+</div>

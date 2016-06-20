@@ -1,0 +1,90 @@
+#form-container{
+  background-color: #acacac;
+}
+#new-contact-from {
+  padding:15%;
+  padding-left:5%;
+  padding-top:5%;
+}
+#new-contact-from .plus-icon {
+  margin-right: 1.8%;
+}
+#new-contact-from .fa {
+  font-size: 20px;
+}
+#form-submit-button-container {
+   margin-right: 0px; 
+}
+.gray-backgroud {
+  background-color:#D8D8D8;
+  border-color:#D8D8D8;
+}
+.dark-gray-backgroud ,
+.dark-gray-backgroud:hover,
+.dark-gray-backgroud:focus {
+  background-color: #696969;
+  border-color: #696969;
+}
+.save-btn{
+  margin-right: 3%;
+}
+.blue-color {
+  color: #36495E;
+}
+.navbar-brand {
+  margin-left: 30px;
+}
+.page-header {
+  margin-top: 0px;
+  border-bottom: 2px solid #d8d8d8;
+}
+.page-header h1{
+  margin-bottom:0px;
+}
+.content-container {
+  margin-left: 4%;
+}
+.contact-search-row {
+  margin-bottom:1%;
+}
+#search-input{
+  width:50%;
+}
+#contacts-table th, td {
+  text-align:center;
+  word-wrap:break-word;
+}
+#contacts-table tbody tr {
+    cursor: pointer;
+}
+#contacts-table td {
+  font-size:10pt;
+}
+#contacts-table { 
+  table-layout: fixed; 
+}
+#contacts-table th {
+    background-color: #D8D8D8;
+}
+#contacts-table > tbody > tr:nth-of-type(even) {
+    background-color: #D8D8D8;
+}
+#contacts-pagination {
+  float:right;
+  margin-right: 2%;
+}
+#contacts-pagination .active a {
+  background-color:#acacac;
+}
+@media (max-width:767px) {
+  .add-contact-button-col {
+    margin-top:2%;
+  }
+  #add-contact-button{
+    float:none !important;
+  }
+  .email-input, .phone-input {
+    margin-top: 2%;
+
+  }
+}

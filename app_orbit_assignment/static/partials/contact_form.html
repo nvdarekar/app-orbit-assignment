@@ -1,0 +1,82 @@
+<div class="page-header">
+    <h1>Contact Form</h1>
+</div>
+<div class="row" style="margin-bottom:1%">
+    <div class="col-md-12 col-lg-12 col-sm-12">
+       <a ng-click="addNewContact()"> <button class="btn btn-primary dark-gray-backgroud pull-right"> Add Contact</button> </a>        
+    </div>
+</div>
+<div id="form-container">
+  <form role="form" id="new-contact-from" name="addEditcontactForm" class="form-horizontal" ng-submit="submitForm(addEditcontactForm.$valid)" >
+
+      <div class="form-group">
+        <label for="first-name" class="control-label col-sm-2">
+        First Name:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="first-name"
+          placeholder="Enter first name" name="first-name"
+          ng-model="contactFormData.first_name" required>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="last-name" class="control-label col-sm-2">
+        Last Name:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="last-name"
+          placeholder="Enter Last Name" ng-model="contactFormData.last_name" required>
+        </div>
+      </div>
+      
+      <fieldset id="email-section">
+        <legend>
+          <span> Email </span>  
+          <i class="fa fa-inverse fa-plus-circle pull-right plus-icon pull-right" id="add-email-row-button" ng-click="appendEmailRow()"></i>
+        </legend>
+        <div class="form-group email-row"  ng-repeat="email in contactFormData.emails">
+            <div class="col-md-3">
+              <select name="email-type" class="form-control email-type" ng-model="email.email_type" required>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+              </select>
+            </div>
+            <div class="col-md-8">
+              <input type="email" name="email" class="form-control email-input" placeholder="Enter email address" ng-model="email.email" required>
+            </div>
+            <div class="col-md-1 pull-right">
+            <i class="fa fa-inverse fa-minus-circle  remove-row-button" ng-click="removeEmailRow($index)"></i>
+
+            </div>        
+        </div>
+      </fieldset>   
+
+      <fieldset id="phone-section">
+        <legend>
+        <span> Phone No </span>  
+        <i class="fa fa-inverse fa-plus-circle pull-right plus-icon" id="add-phone-row-button" ng-click="appendPhoneRow()"></i>
+        </span>
+        </legend>
+        <div class="form-group row phone-row" ng-repeat="contact in contactFormData.contacts">
+            <div class="col-md-3">
+              <select name="phone-type" class="form-control phone-type" ng-model="contact.phone_type" required>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+              </select>
+            </div>
+            <div class="col-md-8">
+              <input type="text" class="form-control phone-input" id="phone" placeholder="Enter phone number" ng-model="contact.phone" required>
+            </div>
+            <div class="col-md-1 pull-right">
+              <i class="fa fa-inverse fa-minus-circle remove-row-button" ng-click="removePhoneRow($index)"></i>
+            <div class="col-md-3">   
+        </div>
+      </fieldset>  
+      <hr class="separator">
+      <div class="form-group" id="form-submit-button-container">
+        <button class="btn btn-default pull-right cancel-btn" ng-click="resetForm()">
+        Cancel</button>
+        <button class="btn btn-default pull-right save-btn" type="submit"> Save</button>              
+      </div>
+
+    </form>
+</div>
