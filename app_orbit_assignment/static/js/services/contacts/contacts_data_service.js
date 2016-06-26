@@ -1,7 +1,7 @@
 'use strict';
 var app = angular.module("ContactsApp"); 
 
-app.service('contactsDataService', function ($http, $q) {
+app.factory('contactsDataService', function ($http, $q) {
     var emptyContactFormData = {
         "first_name":"",
         "last_name":"",
